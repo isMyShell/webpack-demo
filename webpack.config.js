@@ -10,6 +10,13 @@ module.exports = {
 		filename:'[name].bundle.js',
 		path:path.resolve(__dirname,'dist')
 	},
+	devtool: 'inline-source-map',
+	devServer: {
+		// hot:true,
+		// contentBase: './dist'
+		// historyApiFallback: true,
+    // inline: true
+	},
 	module:{
 		rules:[
 			{
