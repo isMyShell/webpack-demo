@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import './index.css'
 import './demo.css'
+import './less.less'
 import Icon from './icon.png'
 import {square} from './math.js'
 import './process.env.NODE_ENV.js'

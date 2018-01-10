@@ -36,6 +36,13 @@ module.exports = {
         }),
         exclude:"/node_modules"
       },
+      // LESS
+      {
+        test: /\.less$/,
+        use: ExtractTextPlugin.extract({ 
+          fallback: 'style-loader', 
+          use: ['css-loader?importLoaders=1&&minimize', 'postcss-loader', 'less-loader'] })
+      },
       {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
