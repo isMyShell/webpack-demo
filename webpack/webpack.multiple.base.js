@@ -20,6 +20,7 @@ module.exports = {
     extensions: ['.js', '.json'],
     alias: {
       '@': path.resolve(__dirname, './src'),
+      'config':path.resolve(__dirname, './config'),
     }
   },
   module: {
