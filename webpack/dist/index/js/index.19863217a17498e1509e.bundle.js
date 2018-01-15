@@ -1,0 +1,2 @@
+webpackJsonp([1],[,,function(e,n,o){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var c=o(0),s=o(3),t=(o.n(s),o(1));o.n(t);console.log("index addOne result",Object(c.a)(1)),console.log("i am index.js !")},function(e,n){}],[2]);
+//# sourceMappingURL=index.19863217a17498e1509e.bundle.js.map

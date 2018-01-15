@@ -4,14 +4,16 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ManifestWebpackPlugin = require('webpack-manifest-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const webpack = require('webpack')
+const multipe = require('./config/config.js')
+const getEntrys = multipe.getEntrys
+const getOutHtmls = multipe.getOutHtmls
+//根据具体目录结构来确定路径
+const entryPattern = './src/pages/**.html';
 
 module.exports = {
-  entry: {
-    app: './src/index.js',
-    print: "./src/printMe.js"
-  },
+  entry:getEntrys(entryPattern),
   output: {
-    filename: 'js/[name].[hash].bundle.js',
+    filename: '[name]/js/[name].[hash].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
@@ -47,7 +49,7 @@ module.exports = {
         loader: 'file-loader',
         options:{
           limit:10000,
-          name:'img/[name].[hash].[ext]'
+          name:'[name]/img/[name].[hash].[ext]'
         },
         exclude: "/node_modules"
       }
@@ -56,23 +58,13 @@ module.exports = {
   plugins: [
     new ManifestWebpackPlugin(),
     new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template:'./index.html',
-      inject:true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-      },
-      chunksSortMode: 'dependency'
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common' // 指定公共 bundle 的名称。
     }),
     new ExtractTextPlugin({
-      filename:"css/[name].[contenthash].css",
+      filename:"[name]/css/[name].[contenthash].css",
       allChunks:true
     }),
+    ...getOutHtmls(entryPattern)
   ]
 }
