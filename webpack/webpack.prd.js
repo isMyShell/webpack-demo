@@ -1,6 +1,7 @@
-
 const merge = require('webpack-merge')
+//单入口的wabpack.base.js
 // const webpackBaseConfig = require('./webpack.base.js')
+//多入口 多出口webpack.multiple.base.js
 const webpackBaseConfig = require('./webpack.multiple.base.js')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
