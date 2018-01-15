@@ -1,2 +1,0 @@
-webpackJsonp([0],{4:function(e,n,o){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a=o(0),c=o(5),s=(o.n(c),o(1));o.n(s);console.log("page addOne result",Object(a.a)(2)),console.log("i am page.js !")},5:function(e,n){}},[4]);
-//# sourceMappingURL=page.712064e1bbfa412d1c95.bundle.js.map
