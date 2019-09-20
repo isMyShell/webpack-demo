@@ -2,8 +2,9 @@
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "build": "webpack",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +25,7 @@
     "commitlint": "^8.2.0",
     "conventional-changelog-cli": "^2.0.23",
     "husky": "^3.0.5",
+    "lodash": "^4.17.15",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
   },
