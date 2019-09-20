@@ -1,2 +1,0 @@
-webpackJsonp([0],[,,function(o,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var c=n(0),i=n(3),l=(n.n(i),n(1)),s=(n.n(l),n(4));n.n(s);console.log("index addOne result",Object(c.a)(1)),console.log("i am index.js !")},function(o,e){},function(o,e,n){var c;c="production",console.log(`%cLooks like we are in ${c} mode !`,"color:#f60")}],[2]);
-//# sourceMappingURL=index.b50a27c56d8d6ff919e4.bundle.js.map
