@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/isMyShell/webpack-demo/issues"
   },
-  "homepage": "https://github.com/isMyShell/webpack-demo#readme"
+  "homepage": "https://github.com/isMyShell/webpack-demo#readme",
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
 }
